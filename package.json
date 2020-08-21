@@ -2,10 +2,14 @@
   "name": "hexlet-frontend-proj-1",
   "version": "1.0.0",
   "description": "Hexlet project #1",
-  "main": "index.js",
+  "main": "bin/brain-games.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "bin": {
+    "brain-games": "bin/brain-games.js"
+  },
+  "type": "module",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/qrxt/frontend-project-lvl1.git"
