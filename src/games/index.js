@@ -3,11 +3,13 @@ import readLine from 'readline-sync';
 import gameCalc from './calc.js';
 import gameIsNumberEven from './is-number-even.js';
 import gameGreatestCommonDivisor from './greatest-common-divisor.js';
+import gameProgression from './progression.js';
 
 const games = {
   calc: gameCalc,
   isNumberEven: gameIsNumberEven,
   greatestCommonDivisor: gameGreatestCommonDivisor,
+  progression: gameProgression,
 };
 
 export { games };
