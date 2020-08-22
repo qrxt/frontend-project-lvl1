@@ -4,4 +4,9 @@
 
 ![Linter](https://github.com/qrxt/frontend-project-lvl1/workflows/Node%20CI/badge.svg)
 
+## [Game] Is Number Even
 [![asciicast](https://asciinema.org/a/354913.svg)](https://asciinema.org/a/354913)
+
+## [Game] Calc
+
+[![asciicast](https://asciinema.org/a/354936.svg)](https://asciinema.org/a/354936)
