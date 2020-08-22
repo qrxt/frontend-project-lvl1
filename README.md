@@ -10,3 +10,8 @@
 ## [Game] Calc
 
 [![asciicast](https://asciinema.org/a/354936.svg)](https://asciinema.org/a/354936)
+
+
+## [Game] Find GCD
+
+[![asciicast](https://asciinema.org/a/354977.svg)](https://asciinema.org/a/354977)
