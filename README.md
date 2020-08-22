@@ -15,3 +15,7 @@
 ## [Game] Find GCD
 
 [![asciicast](https://asciinema.org/a/354977.svg)](https://asciinema.org/a/354977)
+
+## [Game] Find member of arithmetic progression
+
+[![asciicast](https://asciinema.org/a/354995.svg)](https://asciinema.org/a/354995)
