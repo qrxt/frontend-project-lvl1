@@ -2,16 +2,20 @@ import readLine from 'readline-sync';
 
 import gameCalc from './calc.js';
 import gameIsNumberEven from './is-number-even.js';
+import gameGreatestCommonDivisor from './greatest-common-divisor.js';
 
 const games = {
   calc: gameCalc,
-  'is-number-even': gameIsNumberEven,
+  isNumberEven: gameIsNumberEven,
+  greatestCommonDivisor: gameGreatestCommonDivisor,
 };
 
-export default (gameName, rounds = 3) => {
+export { games };
+
+export default (game, rounds = 3) => {
   console.log('Welcome to the Brain Games!');
   const userName = readLine.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  games[gameName](userName, rounds);
+  game(userName, rounds);
 };

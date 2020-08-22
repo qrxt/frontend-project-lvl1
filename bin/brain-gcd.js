@@ -2,4 +2,4 @@
 
 import gamesRunner, { games } from '../src/games/index.js';
 
-gamesRunner(games.calc, 3);
+gamesRunner(games.greatestCommonDivisor, 3);
