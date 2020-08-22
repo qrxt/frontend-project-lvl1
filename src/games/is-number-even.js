@@ -3,8 +3,9 @@ import readLine from 'readline-sync';
 import isEven from '../utils/is-even.js';
 import getRandomInt from '../utils/get-random-int.js';
 
-export default (userName) => {
-  const questionsQuantity = 3;
+export default (userName, roundsQuantity = 3) => {
+  const questionsQuantity = roundsQuantity;
+  console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   const iter = (questionCounter) => {
     if (questionCounter > questionsQuantity) {

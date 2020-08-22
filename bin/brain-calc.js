@@ -2,4 +2,4 @@
 
 import games from '../src/games/index.js';
 
-games('is-number-even', 3);
+games('calc', 3);
