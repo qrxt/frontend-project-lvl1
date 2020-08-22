@@ -19,3 +19,7 @@
 ## [Game] Find member of arithmetic progression
 
 [![asciicast](https://asciinema.org/a/354995.svg)](https://asciinema.org/a/354995)
+
+## [Game] Is Number Prime
+
+[![asciicast](https://asciinema.org/a/354999.svg)](https://asciinema.org/a/354999)
