@@ -2,4 +2,4 @@
 
 import gamesRunner, { games } from '../src/games/index.js';
 
-gamesRunner(games.even, 3);
+gamesRunner(games.isNumberEven, 3);
