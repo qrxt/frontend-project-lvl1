@@ -14,12 +14,9 @@ export default () => {
   const operatorSymbols = Object.keys(operators);
 
   const operator = getRandomFromArr(operatorSymbols);
-  const leftOperand = operator === '*'
-    ? getRandomInt(1, 10)
-    : getRandomInt(1, 100);
-  const rightOperand = operator === '*'
-    ? getRandomInt(1, 10)
-    : getRandomInt(1, 100);
+  const randomMax = operator === '*' ? 10 : 100;
+  const leftOperand = getRandomInt(1, randomMax);
+  const rightOperand = getRandomInt(1, randomMax);
   const operation = operators[operator];
   const correctAnswer = String(operation(leftOperand, rightOperand));
 
