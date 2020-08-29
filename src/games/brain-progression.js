@@ -2,14 +2,11 @@ import getRandomInt from '../utils/get-random-int.js';
 import generateProgression from '../utils/generate-arithmetic-progression.js';
 
 export default () => {
-  const lengthOfProgression = 10;
-  const progression = generateProgression(lengthOfProgression);
-  const progressionIndexToRemove = getRandomInt(0, progression.length);
+  const progression = generateProgression(getRandomInt(1, 10), getRandomInt(1, 4), 10);
+  const progressionIndexToRemove = getRandomInt(0, progression.length - 1);
   const progressionWithMissingElement = progression
     .map((elem, idx) => (
-      idx === progressionIndexToRemove
-        ? '..'
-        : elem
+      idx === progressionIndexToRemove ? '..' : elem
     ))
     .join(' ');
 

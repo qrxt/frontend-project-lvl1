@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gamesRunner, { games } from '../src/games/index.js';
+import gamesRunner, { gameIsNumberPrime } from '../src/games/index.js';
 
-gamesRunner(games.isNumberPrime, 3);
+gamesRunner(gameIsNumberPrime, 3);

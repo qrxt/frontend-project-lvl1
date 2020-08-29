@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gamesRunner, { games } from '../src/games/index.js';
+import gamesRunner, { gameGreatestCommonDivisor } from '../src/games/index.js';
 
-gamesRunner(games.greatestCommonDivisor, 3);
+gamesRunner(gameGreatestCommonDivisor, 3);

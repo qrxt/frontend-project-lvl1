@@ -1,49 +1,48 @@
 import readLine from 'readline-sync';
 
-import gameCalc from './calc.js';
-import gameIsNumberEven from './is-number-even.js';
-import gameGreatestCommonDivisor from './greatest-common-divisor.js';
-import gameProgression from './progression.js';
-import gameIsNumberPrime from './is-number-prime.js';
+import gameCalc from './brain-calc.js';
+import gameIsNumberEven from './brain-even.js';
+import gameGreatestCommonDivisor from './brain-gcd.js';
+import gameProgression from './brain-progression.js';
+import gameIsNumberPrime from './brain-prime.js';
 
-const games = {
-  calc: gameCalc,
-  isNumberEven: gameIsNumberEven, //
-  greatestCommonDivisor: gameGreatestCommonDivisor,
-  progression: gameProgression,
-  isNumberPrime: gameIsNumberPrime,
+export {
+  gameCalc,
+  gameIsNumberEven,
+  gameGreatestCommonDivisor,
+  gameProgression,
+  gameIsNumberPrime,
 };
 
-export { games };
-
-export default (game, rounds = 3) => {
-  // but what about cli.js?
+export default (runGame, rounds = 3) => {
   console.log('Welcome to the Brain Games!');
   const userName = readLine.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  const iter = (questionsQuantity) => {
-    if (questionsQuantity > rounds) {
+  for (let questionsCounter = 0; questionsCounter < rounds; questionsCounter += 1) {
+    if (questionsCounter > rounds) {
       console.log(`Congratulations, ${userName}!`);
-      return false;
+      return null;
     }
 
-    const { introQuestion, question, correctAnswer } = game();
+    const { introQuestion, question, correctAnswer } = runGame();
 
-    console.log(introQuestion);
+    if (questionsCounter === 1) {
+      console.log(introQuestion);
+    }
+
     console.log(`Question: ${question}`);
     const userAnswer = readLine.question('Your answer: ');
 
     if (userAnswer === correctAnswer) {
       console.log('Correct!');
+    } else {
+      console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
+      console.log(`Let's try again, ${userName}!`);
 
-      return iter(questionsQuantity + 1);
+      break;
     }
+  }
 
-    console.log(`"${userAnswer}" is wrong answer ;(. Correct answer was "${correctAnswer}".`);
-    console.log(`Let's try again, ${userName}!`);
-    return false;
-  };
-
-  return iter(1);
+  return null;
 };
