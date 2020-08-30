@@ -19,12 +19,9 @@ export default (runGame, rounds = 3) => {
   const userName = readLine.question('May I have your name? ');
   console.log(`Hello, ${userName}!`);
 
-  for (let questionsCounter = 0; questionsCounter < rounds; questionsCounter += 1) {
-    if (questionsCounter > rounds) {
-      console.log(`Congratulations, ${userName}!`);
-      return null;
-    }
+  let questionsCounter;
 
+  for (questionsCounter = 0; questionsCounter < rounds; questionsCounter += 1) {
     const { introQuestion, question, correctAnswer } = runGame();
 
     if (questionsCounter === 1) {
@@ -42,6 +39,10 @@ export default (runGame, rounds = 3) => {
 
       break;
     }
+  }
+
+  if (questionsCounter === rounds) {
+    console.log(`Congratulations, ${userName}!`);
   }
 
   return null;
