@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gamesRunner, { gameGreatestCommonDivisor } from '../src/games/index.js';
+import runBrainGcdGame from '../src/games/brain-gcd.js';
 
-gamesRunner(gameGreatestCommonDivisor, 3);
+runBrainGcdGame();

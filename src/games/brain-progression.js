@@ -1,8 +1,17 @@
 import getRandomInt from '../utils/get-random-int.js';
-import generateProgression from '../utils/generate-arithmetic-progression.js';
 
-export default () => {
-  const progression = generateProgression(getRandomInt(1, 10), getRandomInt(1, 4), 10);
+import runGame from './index.js';
+
+const generateProgression = (offset, multiplier, length) => Array
+  .from({ length }, (_, idx) => offset + idx * multiplier);
+
+const introQuestion = 'What number is missing in the progression?';
+const roundsQuantity = 3;
+const getProgressionGameData = () => {
+  const offset = getRandomInt(1, 10);
+  const multiplier = getRandomInt(1, 4);
+  const progressionLength = 10;
+  const progression = generateProgression(offset, multiplier, progressionLength);
   const progressionIndexToRemove = getRandomInt(0, progression.length - 1);
   const progressionWithMissingElement = progression
     .map((elem, idx) => (
@@ -13,8 +22,9 @@ export default () => {
   const correctAnswer = String(progression[progressionIndexToRemove]);
 
   return {
-    introQuestion: 'What number is missing in the progression?',
     question: progressionWithMissingElement,
     correctAnswer,
   };
 };
+
+export default () => runGame(introQuestion, roundsQuantity, getProgressionGameData);

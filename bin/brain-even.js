@@ -1,5 +1,5 @@
 #!/usr/bin/env node
 
-import gamesRunner, { gameIsNumberEven } from '../src/games/index.js';
+import runBrainEvenGame from '../src/games/brain-even.js';
 
-gamesRunner(gameIsNumberEven, 3);
+runBrainEvenGame();
