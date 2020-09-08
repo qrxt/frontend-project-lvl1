@@ -1,6 +1,6 @@
 import getRandomInt from '../utils/get-random-int.js';
 
-import runGame from './index.js';
+import runGame from '../engine.js';
 
 const generateProgression = (offset, multiplier, length) => Array
   .from({ length }, (_, idx) => offset + idx * multiplier);

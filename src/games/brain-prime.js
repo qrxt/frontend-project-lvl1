@@ -1,20 +1,20 @@
 import getRandomInt from '../utils/get-random-int.js';
 
-import runGame from './index.js';
+import runGame from '../engine.js';
 
 const isPrime = (number) => {
   if (number <= 1) {
     return false;
   }
 
-  const iter = (acc) => {
-    if (acc === number) {
+  const iter = (counter) => {
+    if (counter === number) {
       return true;
     }
 
-    return number % acc === 0
+    return number % counter === 0
       ? false
-      : iter(acc + 1);
+      : iter(counter + 1);
   };
 
   return iter(2);

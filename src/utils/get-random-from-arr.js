@@ -1,3 +1,5 @@
+import getRandomInt from './get-random-int.js';
+
 export default (array) => (
-  array[Math.floor(Math.random() * array.length)]
+  array[getRandomInt(0, array.length - 1)]
 );

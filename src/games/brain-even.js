@@ -1,6 +1,6 @@
 import getRandomInt from '../utils/get-random-int.js';
 
-import runGame from './index.js';
+import runGame from '../engine.js';
 
 const isEven = (number) => number % 2 === 0;
 

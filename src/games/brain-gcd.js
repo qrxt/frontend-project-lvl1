@@ -1,18 +1,18 @@
 import getRandomInt from '../utils/get-random-int.js';
 
-import runGame from './index.js';
+import runGame from '../engine.js';
 
 const isCommonDivisor = (first, second, divisor) => (
   first % divisor === 0 && second % divisor === 0
 );
 
 const findGcd = (first, second) => {
-  const iter = (acc) => {
-    if (isCommonDivisor(first, second, acc)) {
-      return acc;
+  const iter = (counter) => {
+    if (isCommonDivisor(first, second, counter)) {
+      return counter;
     }
 
-    return iter(acc - 1);
+    return iter(counter - 1);
   };
 
   return iter(Math.max(first, second));

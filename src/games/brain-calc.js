@@ -1,7 +1,7 @@
 import getRandomInt from '../utils/get-random-int.js';
 import getRandomFromArr from '../utils/get-random-from-arr.js';
 
-import runGame from './index.js';
+import runGame from '../engine.js';
 
 const add = (left, right) => left + right;
 const sub = (left, right) => left - right;

@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Hexlet project #1",
   "scripts": {
-    "test": "eslint ./"
+    "lint": "eslint ./"
   },
   "bin": {
     "brain-games": "bin/brain-games.js",
