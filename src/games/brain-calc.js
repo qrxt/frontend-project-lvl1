@@ -8,7 +8,6 @@ const sub = (left, right) => left - right;
 const multiply = (left, right) => left * right;
 
 const introQuestion = 'What is the result of the expression?';
-const roundsQuantity = 3;
 const getGcdGameData = () => {
   const operations = {
     '+': add,
@@ -30,4 +29,4 @@ const getGcdGameData = () => {
   };
 };
 
-export default () => runGame(introQuestion, roundsQuantity, getGcdGameData);
+export default () => runGame(introQuestion, getGcdGameData);

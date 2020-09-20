@@ -6,7 +6,6 @@ const generateProgression = (offset, multiplier, length) => Array
   .from({ length }, (_, idx) => offset + idx * multiplier);
 
 const introQuestion = 'What number is missing in the progression?';
-const roundsQuantity = 3;
 const getProgressionGameData = () => {
   const offset = getRandomInt(1, 10);
   const multiplier = getRandomInt(1, 4);
@@ -27,4 +26,4 @@ const getProgressionGameData = () => {
   };
 };
 
-export default () => runGame(introQuestion, roundsQuantity, getProgressionGameData);
+export default () => runGame(introQuestion, getProgressionGameData);

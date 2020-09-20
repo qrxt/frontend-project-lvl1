@@ -2,9 +2,6 @@
   "name": "hexlet-frontend-proj-1",
   "version": "1.0.0",
   "description": "Hexlet project #1",
-  "scripts": {
-    "lint": "eslint ./"
-  },
   "bin": {
     "brain-games": "bin/brain-games.js",
     "brain-even": "bin/brain-even.js",

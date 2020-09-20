@@ -5,7 +5,6 @@ import runGame from '../engine.js';
 const isEven = (number) => number % 2 === 0;
 
 const introQuestion = 'Answer "yes" if the number is even, otherwise answer "no".';
-const roundsQuantity = 3;
 const getEvenGameData = () => {
   const randomNumber = getRandomInt(1, 100);
   const correctAnswer = isEven(randomNumber) ? 'yes' : 'no';
@@ -16,4 +15,4 @@ const getEvenGameData = () => {
   };
 };
 
-export default () => runGame(introQuestion, roundsQuantity, getEvenGameData);
+export default () => runGame(introQuestion, getEvenGameData);
